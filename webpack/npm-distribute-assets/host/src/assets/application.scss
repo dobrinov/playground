@@ -1,0 +1,10 @@
+@use '~distributable/dist/scss/foo' as *;
+
+html, body { height: 100%; }
+
+body {
+  height: 100%;
+  background: url(shrug.png) no-repeat center 200px;
+
+  @include foo;
+}

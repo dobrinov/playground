@@ -1,0 +1,5 @@
+@use 'bar' as *;
+
+@mixin foo {
+  > div { @include bar; }
+}
