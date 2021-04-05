@@ -5,6 +5,11 @@ module.exports = {
   entry: {
     application: './src/assets/application.scss'
   },
+  resolve: {
+    modules: [
+      'node_modules'
+    ]
+  },
   plugins: [
     new MiniCssExtractPlugin(),
   ],

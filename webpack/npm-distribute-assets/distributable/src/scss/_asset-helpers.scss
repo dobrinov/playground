@@ -1,0 +1,9 @@
+@use 'assets-root' as *;
+
+@function asset-url($path) {
+  @return url('#{$assets-root}/#{$path}');
+}
+
+@function image-url($image) {
+  @return asset-url('/images/#{$image}');
+}

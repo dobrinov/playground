@@ -18,6 +18,9 @@ Something which older versions of [Bootstrap](https://getbootstrap.com/) to is t
 ### Inline assets
 [Bootstrap 5](https://getbootstrap.com/) does something else to solve this. It [inlines the static assets](https://github.com/twbs/bootstrap/blob/f6694b74405261ed454d409ea5251f08cdf6c51c/scss/_variables.scss#L540).
 
+### Module resolution and SASS variable
+While I was working on the small scale reproduction I found out that `css-loader` will actually try to import assets from `node_modules` if `node_modules`is specified in `resolve.modules` ([link](https://webpack.js.org/loaders/css-loader/#url) to documentation). So I decided to extract the root path of my assets in SASS variable, place it in a file and replace this file during the Webpack build with such which uses a path relative to a node module. Look at `src/scss/assets-root.scss` and `src/scss/production-assets-root.scss`.
+
 ## Setup
 
 1. Go to the `distributable` package directory.

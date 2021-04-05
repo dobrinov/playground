@@ -1,0 +1,5 @@
+@use 'foo' as *;
+
+body {
+  @include foo;
+}
