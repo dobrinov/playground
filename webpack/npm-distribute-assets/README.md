@@ -25,7 +25,7 @@ Something which older versions of [Bootstrap](https://getbootstrap.com/) to is t
 3. Go to the `host` application directory.
 4. `yarn link distributable`
 5. `yarn install`
-6. `yarn webpack`
+6. `yarn build`
 
 The result will be the following error:
 ```
