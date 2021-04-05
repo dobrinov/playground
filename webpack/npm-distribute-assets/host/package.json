@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "yarn webpack"
+  },
   "dependencies": {
     "webpack": "4.44.2"
   },
